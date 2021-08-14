@@ -1,0 +1,9 @@
+@import '@scss/variables';
+
+.wrapper {
+    background-color: $gray-light;
+    min-height: 100vh;
+}
+.content {
+    padding: 70px 15px 0;
+}
