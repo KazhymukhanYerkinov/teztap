@@ -4,6 +4,9 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
+      "@context/*": ["src/context/*"],
+      "@hoc/*": ["src/hoc/*"],
+      "@layout/*": ["src/layout/*"],
       "@pages/*": ["src/pages/*"],
       "@scss/*": ["src/scss/*"],
       "@shared/*": ["src/shared/*"],

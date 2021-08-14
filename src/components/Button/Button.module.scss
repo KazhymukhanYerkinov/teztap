@@ -1,0 +1,33 @@
+@import '@scss/variables';
+
+.button {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px;
+
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+.primary {
+  color: $white;
+  background-color: $black-light;
+  border: 1px solid $black-light;
+
+  &:hover {
+    background-color: $black;
+    border: 1px solid $black;
+  }
+}
+.outline {
+  color: $black-light;
+  border: 1px solid $black-light;
+  background-color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: $black-light;
+  }
+}

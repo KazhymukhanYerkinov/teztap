@@ -1,3 +1,5 @@
+import { withAuthRedirect } from '@hoc/withAuthRedirect';
+
 const ProfilePage = () => {
   return (
     <div>
@@ -6,4 +8,4 @@ const ProfilePage = () => {
   )
 }
 
-export default ProfilePage;
+export default withAuthRedirect(ProfilePage);

@@ -327,6 +327,9 @@ module.exports = function (webpackEnv) {
       alias: {
         '@assets': path.resolve('src/assets'),
         '@components': path.resolve('src/components'),
+        '@context': path.resolve('src/context'),
+        '@hoc': path.resolve('src/hoc'),
+        '@layout': path.resolve('src/layout'),
         '@pages': path.resolve('src/pages'),
         '@scss': path.resolve('src/scss'),
         '@shared': path.resolve('src/shared'),

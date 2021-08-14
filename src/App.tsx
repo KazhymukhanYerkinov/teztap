@@ -6,7 +6,7 @@ import SearchPage from '@pages/search-page';
 import ProfilePage from '@pages/profile-page';
 import SubsPage from '@pages/subs-page';
 
-import { withLayout } from './layout/Layout';
+import { withLayout } from '@layout/Layout';
 
 const App = () => {
   return (
