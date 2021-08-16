@@ -1,5 +1,7 @@
 @import './fonts';
 @import './normalize';
+@import './variables';
+@import './components/all';
 
 .container {
   width: 100%;
@@ -7,5 +9,5 @@
   max-width: 500px;
 }
 .auth-container {
-  padding: 15px;
+  padding: 0 15px;
 }

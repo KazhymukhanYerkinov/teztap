@@ -1,0 +1,37 @@
+@import '@scss/variables';
+
+.tag, .tag a {
+  cursor: pointer;
+  color: $blue;
+}
+.medium, .medium a {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+}
+.small, .small a {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+}
+.underline, .underline a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.line, .line a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
