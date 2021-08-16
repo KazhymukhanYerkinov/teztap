@@ -4,4 +4,5 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
   children: React.ReactNode,
   appearance: 'primary' | 'outline',
   fullWidth?: boolean,
+  isLoading?: boolean,
 }

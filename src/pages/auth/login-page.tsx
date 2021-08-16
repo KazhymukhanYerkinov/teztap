@@ -1,28 +1,28 @@
-import * as Yup from 'yup';
 import { authRoutes } from '@shared/routes';
+import { loginValidation } from '@shared/validations';
 import { Formik, Field, Form } from 'formik';
 import { AuthContent, Input, Button, Tag } from '@components/index';
 
 
-const validation = Yup.object().shape({
-  email: Yup.string()
-    .email('Неправильный электронный адрес')
-    .required('Поле, обязательное для заполнения'),
-  password: Yup.string()
-    .min(8, 'Минимальная длина 8 символов')
-    .max(255, 'Максимальная длина 255 символов')
-    .required('Поле, обязательное для заполнения')
-});
+type LoginFormType = {
+  email: string
+  password: string
+}
 
 const LoginPage = (): JSX.Element => {
+  
+  const onSubmit = (formData: LoginFormType) => {
+    console.log(formData)
+  }
+
   return (
     <AuthContent>
       <Formik initialValues = {{
           email: '',
           password: '',
         }}
-        validationSchema = {validation}
-        onSubmit = {(formData) => console.log(formData)}>
+        validationSchema = {loginValidation}
+        onSubmit = {onSubmit}>
 
         {({ isSubmitting, errors, touched }) => (
           <Form>
@@ -30,13 +30,14 @@ const LoginPage = (): JSX.Element => {
             <Field 
               name = 'email' 
               placeholder = 'Email'
-              error = { errors.email && touched.password } 
+              error = { errors.email && touched.email } 
               errorText = { errors.email }
               as = { Input } />
               
             <Field 
               name = 'password' 
               placeholder = 'Пароль' 
+              type = 'password'
               error = { errors.password && touched.password }
               errorText = { errors.password }
               as = { Input } />

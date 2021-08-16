@@ -1,0 +1,14 @@
+@import '@scss/variables';
+
+.description {
+  font-weight: 400;
+  color: $gray;
+}
+.small {
+  font-size: 12px;
+  line-height: 15px;
+}
+.medium {
+  font-size: 14px;
+  line-height: 17px;
+}

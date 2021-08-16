@@ -35,3 +35,12 @@
 .fullWidth {
   width: 100%;
 }
+
+.loading {
+  background-color: $loading;
+  border-color: $loading;
+  &:hover {
+    border-color: $loading;
+    background-color: $loading;
+  }
+}

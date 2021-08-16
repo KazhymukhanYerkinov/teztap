@@ -13,4 +13,6 @@ export const authRoutes = {
   register: `${auth}/register`,
   recovery_email: `${auth}/recovery-email`,
   recovery_password: `${auth}/recovery-password`,
+  success_register: `${auth}/success-register`,
+  success_recovery: `${auth}/success-recovery`,
 }
