@@ -18,6 +18,9 @@
     border: 1px solid $blue;
     background-color: $blue-light;
   }
+  &::placeholder {
+    color: $gray;
+  }
 
   &__error {
     border: 1px solid $red;

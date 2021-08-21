@@ -1,0 +1,11 @@
+.drawer {
+  padding: 20px;
+
+  &__header {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__content {
+    margin-top: 20px;
+  }
+}

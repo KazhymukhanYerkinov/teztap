@@ -14,7 +14,7 @@ export const Tag = ({ className, children, size = 'medium', underline, position 
       [styles.left]: position === 'left',
       [styles.center]: position === 'center',
       [styles.right]: position === 'right',
-    })}>
+    })} {...props}>
     { href 
     ? <Link  to = {href}> {children} </Link>
     : <> { children } </>}

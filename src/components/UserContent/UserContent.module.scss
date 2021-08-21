@@ -1,0 +1,35 @@
+@import '@scss/variables';
+
+.content {
+  text-align: center;
+
+  &__name {
+    margin: 15px 0 5px;
+
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    color: $black;
+  }
+  &__phone {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 400;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $gray;
+  }
+
+  &__label {
+    margin: 5px 0 10px;
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: $blue;
+
+    
+  }
+  &__input {
+    display: none;
+  }
+}

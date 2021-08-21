@@ -2,9 +2,8 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { appRoutes } from '@shared/routes';
 
-import SearchPage from '@pages/search-page';
-import ProfilePage from '@pages/profile-page';
-import SubsPage from '@pages/subs-page';
+import { SearchPage, SubsPage, ProfilePage } from '@pages/index';
+
 
 import { withLayout } from '@layout/Layout';
 

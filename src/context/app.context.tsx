@@ -14,7 +14,7 @@ export const AppContext = React.createContext<IAppContext>({ isAuth: false });
 
 export const AppContextProvider = ({ children }: IAppContextProvider): JSX.Element => {
 
-  const [ isAuth, setIsAuth ] = React.useState(false);
+  const [ isAuth, setIsAuth ] = React.useState(true);
 
   const handleIsAuth = (newIsAuth: boolean) => {
     setIsAuth(newIsAuth);
