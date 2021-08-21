@@ -5,24 +5,18 @@ import { Formik, Field, Form } from 'formik';
 
 import { UserContent, Button, Tag, DrawerComponent, Input, InputLink } from '@components/index';
 import { withAuthRedirect } from '@hoc/withAuthRedirect';
+import { AppContext } from '@context/app.context';
 
 const ProfilePage = () => {
-  const [ drawer, setDrawer ] = React.useState<boolean>(false);
-
-  const activateDrawer = () => {
-    setDrawer(true);
-  }
-  const deactivateDrawer = () => {
-    setDrawer(false);
-  }
+  const { drawer, deactivateDrawer, activateDrawer } = React.useContext(AppContext);
 
   return (
     <div>
       <UserContent name = 'Kazhymukhan Yerkinov'  phone = '+7 708 417 1975'/>
       <Button fullWidth appearance = 'primary' className = 'm-top--30'> подключиться к телеграмме </Button>
-      <Tag underline position = 'center' className = 'm-top--10' onClick = {activateDrawer}> Изменить профиль </Tag>
+      <Tag underline position = 'center' className = 'm-top--10' onClick = {activateDrawer!}> Изменить профиль </Tag>
 
-      <DrawerComponent drawer = { drawer } deactivateDrawer = { deactivateDrawer }>
+      <DrawerComponent drawer = { drawer } deactivateDrawer = { deactivateDrawer! }>
         <UserContent update />
         <Formik initialValues = {{
             name: '',

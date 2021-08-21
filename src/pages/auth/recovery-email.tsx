@@ -22,7 +22,7 @@ const RecoveryEmail = (): JSX.Element => {
         onSubmit = {onSubmit}>
           {({ isSubmitting, errors, touched }) => (
             <Form>
-              <Tag size = 'small'> На вашу почту был отправлен код <br /> подтверждения, введите код из письма </Tag>
+              <Tag size = 'small' className = 'm-bottom--5'> На вашу почту был отправлен код <br /> подтверждения, введите код из письма </Tag>
               <Field 
                 name = 'email' 
                 placeholder = 'Email'

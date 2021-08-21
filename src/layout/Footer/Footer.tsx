@@ -7,6 +7,7 @@ import { BottomNavigation, BottomNavigationAction, makeStyles } from '@material-
 import SearchIcon from '@material-ui/icons/Search';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { AppContext } from '@context/app.context';
 
 
 
@@ -27,39 +28,38 @@ const useStyles = makeStyles({
     
     boxShadow: '1px 1px 4px rgba(0, 0, 0, 0.25)'
   }
-})
+});
+
+
 
 export const Footer = ({ ...props }: FooterProps): JSX.Element => {
   const classes = useStyles();
-  const [ value, setValue ] = React.useState<number>(0);
+  const { page, handlePage } = React.useContext(AppContext);
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
-  }
 
   return (
     <div {...props}> 
-      <BottomNavigation value = { value } onChange = {handleChange} className = {classes.stickyBottom}>
+      <BottomNavigation value = { page } onChange = {handlePage!} className = {classes.stickyBottom}>
 
           <BottomNavigationAction 
             component = { Link }
             to = {appRoutes.search}
             label = 'Поиск'
-            icon = {<SearchIcon className = {value === 0 ? classes.activeIcon : classes.icon}/> }  
+            icon = {<SearchIcon className = {page === 0 ? classes.activeIcon : classes.icon}/> }  
           />
 
           <BottomNavigationAction 
             component = { Link }
             to = {appRoutes.subs}
             label = 'Подписка'
-            icon = {<AddBoxIcon className = {value === 1 ? classes.activeIcon : classes.icon} /> } 
+            icon = {<AddBoxIcon className = {page === 1 ? classes.activeIcon : classes.icon} /> } 
           />
 
           <BottomNavigationAction 
             component = { Link }
             label = 'Профиль'
             to = {appRoutes.profile}
-            icon = {<AccountCircleIcon className = {value === 2 ? classes.activeIcon : classes.icon}/> }   
+            icon = {<AccountCircleIcon className = {page === 2 ? classes.activeIcon : classes.icon}/> }   
           />
 
       </BottomNavigation>

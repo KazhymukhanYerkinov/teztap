@@ -9,20 +9,19 @@ import '@scss/app.scss';
 
 
 const Root = () => {
+
   return (
     <AppContextProvider>
-
-      <div className = 'container'>
+      <div className='container'>
         <BrowserRouter>
           <Switch>
-            <Route path = {appRoutes.root} component = { App } />
-            <Route path = {authRoutes.root} component = { Auth } />
-            <Route path = {userRoutes.root} component = { User } />
-            <Route path = '*' render = {() => (<Redirect to = {appRoutes.root} />)} />
+            <Route path={appRoutes.root} component={App} />
+            <Route path={authRoutes.root} component={Auth} />
+            <Route path={userRoutes.root} component={User} />
+            <Route path='*' render={() => (<Redirect to={appRoutes.root} />)} />
           </Switch>
         </BrowserRouter>
       </div>
-
     </AppContextProvider>
   )
 }
